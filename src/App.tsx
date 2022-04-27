@@ -1,25 +1,26 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { useReducer } from 'react';
 import './App.css';
+import { useSelector } from 'react-redux';
+import { Characters } from './pages/characters/characters';
+import Favorites from './pages/favourites/favorites';
+import { User } from './pages/user/user';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+        <div className="parent">
+            <div className='products'>
+              <Characters/>
+            </div>
+            <span  className='divider'></span>
+            <div  className='loginPreferContainer'>
+                <div className='login'>
+                  <User/>
+                </div>
+                <div className='prefer'>
+                  <Favorites/>
+                </div>
+            </div>
+        </div>
   );
 }
 

@@ -1,0 +1,17 @@
+.singleImg{
+    max-width: 350px;
+    margin: 10px;
+    background-color: gray;
+  }
+  .singleImg img{
+    border-radius: 10px;
+  }
+  .flex{
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .loadflex{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+  }
